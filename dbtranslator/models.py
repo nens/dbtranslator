@@ -18,7 +18,7 @@ class MessageString(models.Model):
     message_str = models.TextField(blank=True)
 
     class Meta:
-        unique_together = ('hash', 'language')
+        unique_together = ('digest', 'language')
 
     def __unicode__(self):
         return '%s: %s (%s)' % (self.message_id, self.message_str, self.language)
